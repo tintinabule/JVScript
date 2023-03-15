@@ -24,7 +24,7 @@ let changeImage = 1
 // 0.2 : ajout icone JVC pour les topics (au lieu des avatars)
 // 0.3 : changeImage pour désactiver les icones de dossier, 
 // 0.4 : match marche sur tous les sous-forums
-
+// 0.5 : alterner les background
 
 
 
@@ -54,3 +54,13 @@ topics.forEach(topic => {
     ts.style.color  = "#e3ae00";
   }
 });
+
+//alternate background
+let msgs = document.querySelectorAll("div.topic");
+
+for (var i = 0; i < msgs.length; i += 2) {
+  msg0 = msgs[i];
+  msg0.style.background = "#363e49"; 
+  msg1 = msgs[i+1];
+  msg1.style.background = "#2e3238"; 
+};
