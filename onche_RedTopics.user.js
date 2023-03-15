@@ -10,11 +10,19 @@
 
 
 console.log("starting");
-let topics = document.querySelectorAll(".topic-subject");
+
+let topics = document.querySelectorAll(".topic");
 
 topics.forEach(topic => {
-  let nb = topic.querySelector(".topic-nb");
+  let ts = topic.querySelector(".topic-subject"); 
+  
+  
   if (parseInt(nb.textContent) > 10) {
-    topic.style.color  = "red";
+    ts.style.color  = "#E99FAA";
+    lt
+  }
+  
+  if (parseInt(nb.textContent) > 100) {
+    ts.style.color  = "#e3ae00";
   }
 });
