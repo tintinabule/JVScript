@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name     [ONCHE]_RedTopics
 // @author 	 tintinabule
-// @version  0.6
+// @version  0.7
 // @grant    none
 // @match https://onche.org/forum/*
 // ==/UserScript==
@@ -16,7 +16,8 @@ let changeImage = 1
 //old style mettre à 1 pour avoir les anciennes icones
 let oldstyle = 0
 
-
+// change color text = 1 pour avoir les topics rouges avec le texte en rouge et les topics >100 en jaune
+let changeTextColor = 0
 
 
 
@@ -28,6 +29,7 @@ let oldstyle = 0
 // 0.4 : match marche sur tous les sous-forums
 // 0.5 : alterner les background
 // 0.6 : Ajout ancien style de dossiers
+// 0.7 : corrige limite à 20, couleur du texte en paramètre facultatif
 
 
 ///////////////// CODE, ne pas modifier
@@ -47,8 +49,10 @@ topics.forEach(topic => {
       	imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/rectangle-yellow.png" 
       }  }
   
-  if (parseInt(nb.textContent) > 10) {
-    ts.style.color  = "#E99FAA";
+  if (parseInt(nb.textContent) > 20) {
+    if (changeTextColor ==1){
+    	ts.style.color  = "#E99FAA";
+    }
     
     if (imgAvatar != null  && changeImage!=0) {
       if (oldstyle == 1) {
@@ -59,7 +63,7 @@ topics.forEach(topic => {
     }
   } 
   
-  if (parseInt(nb.textContent) > 100) {
+  if (parseInt(nb.textContent) > 100 && changeTextColor ==1) {
     ts.style.color  = "#e3ae00";
   }
 });
