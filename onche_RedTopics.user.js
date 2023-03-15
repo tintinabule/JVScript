@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name     [ONCHE]_RedTopics
 // @author 	 tintinabule
-// @version  0.3
+// @version  0.4
 // @grant    none
-// @match https://onche.org/forum/1/blabla-general*
+// @match https://onche.org/forum/*
 // ==/UserScript==
 
 
@@ -19,9 +19,11 @@ let changeImage = 1
 
 
 //////////////// HISTORIQUE
+// 15.03
 // 0.1 : couleurs du texte
 // 0.2 : ajout icone JVC pour les topics (au lieu des avatars)
 // 0.3 : changeImage pour désactiver les icones de dossier, 
+// 0.4 : match marche sur tous les sous-forums
 
 
 
