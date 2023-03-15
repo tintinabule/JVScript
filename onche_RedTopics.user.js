@@ -23,13 +23,13 @@ let changeTextColor = 0
 
 //////////////// HISTORIQUE
 // 15.03
-// 0.1 : couleurs du texte
-// 0.2 : ajout icone JVC pour les topics (au lieu des avatars)
-// 0.3 : changeImage pour désactiver les icones de dossier, 
-// 0.4 : match marche sur tous les sous-forums
-// 0.5 : alterner les background
-// 0.6 : Ajout ancien style de dossiers
 // 0.7 : corrige limite à 20, couleur du texte en paramètre facultatif
+// 0.6 : Ajout ancien style de dossiers
+// 0.5 : alterner les background
+// 0.4 : match marche sur tous les sous-forums
+// 0.3 : changeImage pour désactiver les icones de dossier, 
+// 0.2 : ajout icone JVC pour les topics (au lieu des avatars)
+// 0.1 : couleurs du texte
 
 
 ///////////////// CODE, ne pas modifier
