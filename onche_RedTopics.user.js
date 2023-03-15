@@ -14,7 +14,7 @@
 let changeImage = 1
 
 //old style mettre à 1 pour avoir les anciennes icones
-let oldstyle = 1
+let oldstyle = 0
 
 
 
