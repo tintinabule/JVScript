@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name     [ONCHE]_RedTopics
 // @author 	 tintinabule
-// @version  0.4
+// @version  0.5
 // @grant    none
 // @match https://onche.org/forum/*
 // ==/UserScript==
