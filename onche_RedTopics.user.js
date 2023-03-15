@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name     [ONCHE]_RedTopics
 // @author 	 tintinabule
-// @version  0.5
+// @version  0.6
 // @grant    none
 // @match https://onche.org/forum/*
 // ==/UserScript==
@@ -13,6 +13,8 @@
 // Mettre à 0 pour ne pas changer les avatars des topics en une icone de fichier
 let changeImage = 1
 
+//old style mettre à 1 pour avoir les anciennes icones
+let oldstyle = 1
 
 
 
@@ -25,7 +27,7 @@ let changeImage = 1
 // 0.3 : changeImage pour désactiver les icones de dossier, 
 // 0.4 : match marche sur tous les sous-forums
 // 0.5 : alterner les background
-
+// 0.6 : Ajout ancien style de dossiers
 
 
 ///////////////// CODE, ne pas modifier
@@ -39,14 +41,21 @@ topics.forEach(topic => {
   let ts = topic.querySelector(".topic-subject"); 
   
   if (imgAvatar != null && changeImage!=0) {
-    imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/rectangle-yellow.png" 
-  }
+      if (oldstyle == 1) {
+      	imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/old-folder-yellow.png" 
+      } else {
+      	imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/rectangle-yellow.png" 
+      }  }
   
   if (parseInt(nb.textContent) > 10) {
     ts.style.color  = "#E99FAA";
     
     if (imgAvatar != null  && changeImage!=0) {
-      imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/rectangle-red.png" 
+      if (oldstyle == 1) {
+      	imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/old-folder-red.png" 
+      } else {
+      	imgAvatar.src = "https://raw.githubusercontent.com/tintinabule/JVScript/main/img/rectangle-red.png" 
+      }
     }
   } 
   
@@ -54,6 +63,7 @@ topics.forEach(topic => {
     ts.style.color  = "#e3ae00";
   }
 });
+
 
 //alternate background
 let msgs = document.querySelectorAll("div.topic");
