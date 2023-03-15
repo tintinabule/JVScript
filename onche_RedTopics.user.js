@@ -19,7 +19,6 @@ topics.forEach(topic => {
   
   if (parseInt(nb.textContent) > 10) {
     ts.style.color  = "#E99FAA";
-    lt
   }
   
   if (parseInt(nb.textContent) > 100) {
