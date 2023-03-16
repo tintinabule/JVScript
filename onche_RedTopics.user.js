@@ -27,7 +27,7 @@ let nbPostsRedTopic = 20;
 let enableGoldenTopics = 0;
  
 //à mettre à 0 pour désactiver le changement de couleur du texte (topics rouges et goldens)
-let enableColorChanger = 1;
+let enableColorChanger = 0;
  
 //à mettre à 0 si vous voulez désactiver les modifications de fond (couleurs améliorées + alternances de couleurs liste sujet)
 let enableBackgroundModifier = 1;
